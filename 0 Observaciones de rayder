@@ -1,0 +1,5 @@
+Los archivos importantes son 3 basicamente
+-Form.tsx -> Aqui lo que pasa es que solo tomamos los datos del usuario, y los mandamos a firebase 
+-firebase.ts -> Aqui lo que pasa es que nos enlazamos con las credenciales firebase del proyecto
+-Succes.tsx -> Es un mensaje de exito al mandar los datos
+

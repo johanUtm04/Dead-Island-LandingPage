@@ -1,0 +1,25 @@
+import React from "react";
+
+const Success: React.FC = () => {    
+    
+    return (
+        <>
+            <div className="scanline-overlay"></div> 
+
+            <div className="message-box">
+                <h2>[MISIÓN CUMPLIDA]</h2>
+                <p className="status-message">
+                    Transmisión de datos exitosa.<br/>
+                    Su expediente de recluta ha sido registrado correctamente.<br/>
+                    ¡Prepárese para el despliegue!
+                </p>
+                <a href="/" className="btn-return">
+                    VOLVER A BASE
+                </a>
+            </div>
+        </>
+    );
+
+};
+
+export default Success;

@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --color-neon-green: #39ff14;
+    --color-dark-jungle: #0a1a0a;
+    --color-dark-gray: #1a1a1a;
+    --color-text-light: #ffffff;
+    --color-text-dark: #000000;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+    background-color: var(--color-dark-jungle);
+}
+
+.scanline-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.1) 0px,
+        rgba(0,0,0,0.1) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.main-container {
+    background-color: rgba(0,0,0,0.85);
+    border: 3px solid var(--color-neon-green);
+    box-shadow: 0 0 30px var(--color-neon-green);
+    padding: 30px 50px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    margin: 20px auto;
+    position: relative;
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0%, 100% { box-shadow: 0 0 30px var(--color-neon-green); }
+    50% { box-shadow: 0 0 20px var(--color-neon-green), 0 0 40px var(--color-neon-green); }
+}
+
+h1 {
+    color: var(--color-neon-green);
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px var(--color-neon-green);
+}
+
+.tagline {
+    color: var(--color-text-light);
+    font-size: 0.8em;
+    margin-bottom: 0;
+    text-shadow: 1px 1px 3px var(--color-dark-gray);
+}
+
+.form-container {
+    background-color: rgba(0,0,0,0.9);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px var(--color-neon-green);
+    max-width: 450px;
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid var(--color-neon-green);
+}
+
+h2 {
+    color: var(--color-neon-green);
+    font-size: 1.5em;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--color-neon-green);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px var(--color-neon-green);
+}
+
+input[type="text"], input[type="email"], input[type="number"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid var(--color-neon-green);
+    background-color: var(--color-dark-gray);
+    color: var(--color-text-light);
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-family: 'Press Start 2P', cursive;
+}
+
+input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+button[type="submit"] {
+    background-color: var(--color-neon-green);
+    color: var(--color-text-dark);
+    border: none;
+    padding: 12px 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+    font-size: 0.9em;
+    font-family: 'Press Start 2P', cursive;
+    box-shadow: 0 0 10px var(--color-neon-green);
+}
+
+button[type="submit"]:hover {
+    background-color: #6eff6e;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px #6eff6e;
+}
+
+button[type="submit"]:active {
+    transform: translateY(0);
+    box-shadow: 0 0 8px var(--color-neon-green);
+}
