@@ -27,7 +27,7 @@ const Form: React.FC = () => {
         <>
             <div className="scanline-overlay"></div>
             <div className="main-container">
-                <h1>¡Dead Island Llego a tu Aburrida vida, Tibio!</h1>
+                <h1>Island Escape Llego a tu Aburrida vida, Tibio!</h1>
                 <p className="tagline">"La jungla te espera. La misión es ahora."</p>
             </div>
 
