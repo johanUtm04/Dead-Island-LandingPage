@@ -33,7 +33,7 @@ const Form: React.FC = () => {
             <div className="scanline-overlay"></div>
             <div className="main-container">
                 <h1>¡Island Escape llego a tu vida!</h1>
-                <p className="tagline">"La jungla te espera. La misión es ahora."</p>
+                <p className="tagline">"La jungla te espera La misión es ahora."</p>
             </div>
 
             <div className="form-container">
