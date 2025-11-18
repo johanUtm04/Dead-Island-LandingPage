@@ -1,6 +1,7 @@
 // src/firebase.ts
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc, CollectionReference } from "firebase/firestore";
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: "AIzaSyC0L36IGX3HrU-9rtiaUunE1_8zbwTOkiQ",
@@ -15,6 +16,10 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+//Registrar cuantos entran al link 
+const analytics = getAnalytics(app);
+logEvent(analytics, "landing_visit");
+
 // Tipos para tu colección
 interface Registro {
   nombre: string;
@@ -24,5 +29,5 @@ interface Registro {
 
 const registrosCollection: CollectionReference<Registro> = collection(db, "registros") as CollectionReference<Registro>;
 
-export { db, registrosCollection, addDoc };    export type { Registro };
+export { db, registrosCollection, addDoc, analytics };    export type { Registro };
 

@@ -1,7 +1,8 @@
 import React, { useState, type FormEvent } from "react";
 import "../css/Form.css";
-import { registrosCollection, addDoc, type Registro } from "../firebase";
+import {analytics, registrosCollection, addDoc, type Registro } from "../firebase";
 import { useNavigate } from 'react-router-dom';
+import {  logEvent } from "firebase/analytics";
 
 const Form: React.FC = () => {
     const [nombre, setNombre] = useState("");
@@ -14,6 +15,10 @@ const Form: React.FC = () => {
 
         const nuevoRegistro: Registro = { nombre, correo, edad };
         try {
+            //Guardar quien entra al link
+            logEvent(analytics, "form_submitted",{
+                email: nuevoRegistro.correo ? "provided" : "empty",
+            })
             await addDoc(registrosCollection, nuevoRegistro);
             navigate("/success");
             setNombre(""); setEdad(""); setCorreo("");
@@ -27,7 +32,7 @@ const Form: React.FC = () => {
         <>
             <div className="scanline-overlay"></div>
             <div className="main-container">
-                <h1>Island Escape Llego a tu Aburrida vida, Tibio!</h1>
+                <h1>¡Island Escape llego a tu vida!</h1>
                 <p className="tagline">"La jungla te espera. La misión es ahora."</p>
             </div>
 

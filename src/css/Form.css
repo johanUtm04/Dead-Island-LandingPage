@@ -134,3 +134,63 @@ button[type="submit"]:active {
     transform: translateY(0);
     box-shadow: 0 0 8px var(--color-neon-green);
 }
+
+/* Responsividad(para diferentes dispositivos) */
+/* Celulares pequeños */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 1.4em;
+        letter-spacing: 2px;
+    }
+
+    .main-container {
+        padding: 20px;
+        margin: 10px;
+        box-shadow: 0 0 15px var(--color-neon-green);
+    }
+
+    .form-container {
+        padding: 20px;
+        box-shadow: 0 0 12px var(--color-neon-green);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+        font-size: 0.7em;
+        padding: 10px;
+    }
+
+    button[type="submit"] {
+        padding: 10px 20px;
+        font-size: 0.8em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    .main-container {
+        max-width: 500px;
+        padding: 25px;
+    }
+
+    .form-container {
+        max-width: 420px;
+        padding: 25px;
+    }
+
+    button[type="submit"] {
+        padding: 12px 22px;
+        font-size: 0.85em;
+    }
+}
