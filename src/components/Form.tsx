@@ -53,23 +53,11 @@ const Form: React.FC = () => {
                 <h1>¡Island Escape llegó a tu vida!</h1>
                 <p className="tagline">"La jungla te espera. La misión es ahora."</p>
             </div>
-{/* 🔥 Contador visible */}
-<div className="counter-box">
-    <h3
-        style={{
-            color: "var(--color-neon-green)",
-            textShadow: `
-                2px 2px 0 #000,
-                -2px -2px 0 #000,
-                -2px 2px 0 #000,
-                2px -2px 0 #000,
-                0 0 8px var(--color-neon-green)
-            `
-        }}
-    >
-        Participantes Registrados: <span>{contador}</span>
-    </h3>
-</div>
+
+            {/* 🔥 Contador visible */}
+            <div className="counter-box">
+                <h3>Participantes Registrados: <span>{contador}</span></h3>
+            </div>
 
 
             <div className="form-container">

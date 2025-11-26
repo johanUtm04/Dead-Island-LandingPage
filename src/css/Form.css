@@ -194,3 +194,24 @@ button[type="submit"]:active {
         font-size: 0.85em;
     }
 }
+/* ⭐ CONTADOR DE PARTICIPANTES COMPACTO ⭐ */
+.counter-box {
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 2px solid var(--color-neon-green);
+    color: var(--color-neon-green);
+    text-align: center;
+    padding: 10px 14px; /* ⬅️ más compacto */
+    width: fit-content;
+    margin: 15px auto; /* ⬅️ menos separación */
+    border-radius: 6px;
+    box-shadow: 0 0 12px var(--color-neon-green);
+    font-size: 0.85em; /* ⬅️ más pequeño */
+    text-shadow: 0 0 6px var(--color-neon-green);
+}
+
+.counter-box span {
+    color: #ffffff;
+    text-shadow: 0 0 10px var(--color-neon-green);
+    font-size: 1.1em; /* número más equilibrado */
+    font-weight: bold;
+}
